@@ -57,21 +57,7 @@
 }
 
 .title em {
-  position: relative;
-  display: inline-block;
   font-style: italic;
-}
-
-/* Thin ochre line under the name */
-.title em::after {
-  content: "";
-  position: absolute;
-  left: 0.04em;
-  right: 0.04em;
-  bottom: 0.1em;
-  height: 2px;
-  background: var(--color-ochre);
-  transform-origin: left center;
 }
 
 /* Portfolio/Body/Intro */
@@ -90,8 +76,7 @@
   gap: var(--space-24);
 }
 
-/* Delicate entrance: photo, heading, subtitle and buttons rise in one by one,
-   then the line under the name draws from left to right.
+/* Delicate entrance: photo, heading, subtitle and buttons rise in one by one.
    Skipped entirely for people who turn off motion in their system settings. */
 @media (prefers-reduced-motion: no-preference) {
   .photo,
@@ -112,10 +97,6 @@
   .actions {
     animation-delay: 0.45s;
   }
-
-  .title em::after {
-    animation: draw 0.7s cubic-bezier(0.6, 0, 0.2, 1) 0.9s both;
-  }
 }
 
 @keyframes rise {
@@ -126,15 +107,6 @@
   to {
     opacity: 1;
     transform: none;
-  }
-}
-
-@keyframes draw {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
   }
 }
 
