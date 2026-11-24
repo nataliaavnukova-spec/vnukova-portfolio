@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { brandName } from "@/content/site";
 import { useLanguage } from "./LanguageProvider";
 import LanguageSwitch from "./LanguageSwitch";
 import styles from "./Header.module.css";
@@ -11,10 +12,11 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.bar}>
-        <a href="/" className={styles.brand} aria-label={t.homeLabel}>
+        <a href="/" className={styles.brand} title={t.homeLabel}>
           <span className={styles.logo}>
             <Image src="/images/logo-n.svg" alt="" width={44} height={48} priority />
           </span>
+          <span className={styles.name}>{brandName}</span>
         </a>
 
         <nav className={styles.nav} aria-label={t.navLabel}>

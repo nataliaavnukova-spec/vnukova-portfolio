@@ -8,14 +8,21 @@ export const languages: { code: Language; label: string }[] = [
   { code: "en", label: "EN" },
 ];
 
+// Name shown in the header (plan, section 3.1) — same in both languages.
+export const brandName = "Natalia Vnukova";
+
+// Contact is email only (plan, section 3.6).
+export const contactEmail = "natalia@gmail.com";
+
 export const content = {
   ua: {
-    homeLabel: "Наталя Внукова — на головну",
+    homeLabel: "Natalia Vnukova — на головну",
     navLabel: "Основна навігація",
     languageLabel: "Мова сайту",
     nav: [
       { label: "Роботи", href: "#work" },
       { label: "Про мене", href: "#about" },
+      { label: "Підхід", href: "#approach" },
       { label: "Контакт", href: "#contact" },
     ],
     hero: {
@@ -35,6 +42,7 @@ export const content = {
     nav: [
       { label: "Work", href: "#work" },
       { label: "About", href: "#about" },
+      { label: "Approach", href: "#approach" },
       { label: "Contact", href: "#contact" },
     ],
     hero: {

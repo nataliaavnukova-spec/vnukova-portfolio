@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { contactEmail } from "@/content/site";
 import Button from "./Button";
 import { useLanguage } from "./LanguageProvider";
 import styles from "./Hero.module.css";
@@ -34,7 +35,7 @@ export default function Hero() {
 
       <div className={styles.actions}>
         <Button href="#work">{hero.primaryAction}</Button>
-        <Button href="#contact" variant="secondary">
+        <Button href={`mailto:${contactEmail}`} variant="secondary">
           {hero.secondaryAction}
         </Button>
       </div>
