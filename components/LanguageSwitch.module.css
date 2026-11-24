@@ -1,0 +1,33 @@
+/* Language / UA selected */
+.switch {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-aubergine);
+  border-radius: 28px;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 28px;
+  background: transparent;
+  color: var(--color-aubergine);
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.selected {
+  background: var(--color-aubergine);
+  color: var(--color-white);
+}

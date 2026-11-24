@@ -1,0 +1,96 @@
+.header {
+  width: 100%;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24) 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 56px;
+}
+
+/* Portfolio/Logo N */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-48);
+}
+
+/* Portfolio/Navigation item */
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-ochre);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.navItem:hover::after,
+.active::after {
+  transform: scaleX(1);
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 160px;
+  height: 56px;
+}
+
+/* Ochre / Header hairline */
+.hairline {
+  height: 1px;
+  width: 100%;
+  background: var(--color-ochre);
+}
+
+@media (max-width: 639px) {
+  .bar {
+    flex-wrap: wrap;
+    row-gap: var(--space-16);
+  }
+
+  .brand,
+  .language {
+    width: auto;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: var(--space-32);
+  }
+}

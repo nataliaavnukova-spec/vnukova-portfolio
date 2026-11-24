@@ -1,0 +1,105 @@
+/* Hero / Centered introduction */
+.hero {
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-56);
+  padding: var(--space-56) 0 var(--space-80);
+  text-align: center;
+}
+
+/* Profile photo */
+.photo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Outline sits on top of the photo, as in Figma */
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-aubergine);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-32);
+  width: 100%;
+  max-width: 1080px;
+}
+
+/* Portfolio/Heading/Hero */
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: normal;
+}
+
+.title em {
+  font-style: italic;
+}
+
+/* Portfolio/Body/Intro */
+.subtitle {
+  margin: 0;
+  max-width: 1000px;
+  font-size: 20px;
+  line-height: normal;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-24);
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero {
+    gap: var(--space-32);
+    padding: var(--space-48) 0 var(--space-56);
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: var(--space-16);
+  }
+}
