@@ -24,8 +24,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="uk" className={`${onest.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+    // suppressHydrationWarning: browser extensions (Grammarly, translators, password
+    // managers) add their own attributes to <html>/<body> before React loads.
+    // It only affects these two tags' own attributes, not the page content.
+    <html lang="uk" className={`${onest.variable} ${playfair.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
