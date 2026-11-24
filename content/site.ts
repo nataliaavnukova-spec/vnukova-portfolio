@@ -12,7 +12,7 @@ export const languages: { code: Language; label: string }[] = [
 export const brandName = "Natalia Vnukova";
 
 // Contact is email only (plan, section 3.6).
-export const contactEmail = "natalia@gmail.com";
+export const contactEmail = "natalia.a.vnukova@gmail.com";
 
 export const content = {
   ua: {
